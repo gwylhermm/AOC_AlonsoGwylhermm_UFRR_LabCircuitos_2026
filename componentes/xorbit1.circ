@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="5.0.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v5.0.0(https://github.com/logisim-evolution/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+    </tool>
+    <tool name="Probe">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="south"/>
+    </tool>
+    <tool name="Tunnel">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Clock">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Constant">
+      <a name="value" val="0x0"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#FPArithmetic" name="4"/>
+  <lib desc="#Memory" name="5"/>
+  <lib desc="#I/O" name="6"/>
+  <lib desc="#TTL" name="7"/>
+  <lib desc="#TCL" name="8"/>
+  <lib desc="#Base" name="9"/>
+  <lib desc="#BFH-Praktika" name="10"/>
+  <lib desc="#Input/Output-Extra" name="11"/>
+  <lib desc="#Soc" name="12"/>
+  <main name="XOR_1bit"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool map="Button2" name="Poke Tool"/>
+    <tool map="Button3" name="Menu Tool"/>
+    <tool map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool name="Poke Tool"/>
+    <tool name="Edit Tool"/>
+    <tool name="Wiring Tool"/>
+    <tool name="Text Tool"/>
+    <tool name="Image"/>
+    <sep/>
+    <tool name="Pin"/>
+    <tool name="Pin">
+      <a name="facing" val="west"/>
+      <a name="type" val="output"/>
+    </tool>
+    <sep/>
+    <tool name="NOT Gate"/>
+    <tool name="AND Gate"/>
+    <tool name="OR Gate"/>
+    <tool name="XOR Gate"/>
+    <tool name="NAND Gate"/>
+    <tool name="NOR Gate"/>
+    <sep/>
+    <tool name="D Flip-Flop"/>
+    <tool name="Register"/>
+  </toolbar>
+  <circuit name="XOR_1bit">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="XOR_1bit"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="2048000.0"/>
+    <comp lib="0" loc="(140,120)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="0" loc="(140,180)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="0" loc="(760,160)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(270,120)" name="NOT Gate"/>
+    <comp lib="1" loc="(270,180)" name="NOT Gate"/>
+    <comp lib="1" loc="(460,120)" name="AND Gate"/>
+    <comp lib="1" loc="(460,190)" name="AND Gate"/>
+    <comp lib="1" loc="(600,160)" name="OR Gate"/>
+    <wire from="(140,120)" to="(220,120)"/>
+    <wire from="(140,180)" to="(230,180)"/>
+    <wire from="(220,100)" to="(220,120)"/>
+    <wire from="(220,100)" to="(410,100)"/>
+    <wire from="(220,120)" to="(240,120)"/>
+    <wire from="(230,180)" to="(230,210)"/>
+    <wire from="(230,180)" to="(240,180)"/>
+    <wire from="(230,210)" to="(410,210)"/>
+    <wire from="(270,120)" to="(340,120)"/>
+    <wire from="(270,180)" to="(290,180)"/>
+    <wire from="(290,140)" to="(290,180)"/>
+    <wire from="(290,140)" to="(410,140)"/>
+    <wire from="(340,120)" to="(340,170)"/>
+    <wire from="(340,170)" to="(410,170)"/>
+    <wire from="(460,120)" to="(510,120)"/>
+    <wire from="(460,190)" to="(530,190)"/>
+    <wire from="(510,120)" to="(510,140)"/>
+    <wire from="(510,140)" to="(550,140)"/>
+    <wire from="(530,180)" to="(530,190)"/>
+    <wire from="(530,180)" to="(550,180)"/>
+    <wire from="(600,160)" to="(760,160)"/>
+  </circuit>
+</project>
